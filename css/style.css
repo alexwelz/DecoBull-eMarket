@@ -2,25 +2,24 @@
     margin: 0;
     padding: 0;
     text-decoration: none;
-    list-style: none;
-    
+    list-style: none;   
 }
 
-
 header{
-    background:  #c3ab4a; 
+    background:  #e4d595; 
     height: 74px;
 
 }
 main{
-    background:#574b1e;
+
+    background:  #c1a188;
 }
 
 /*--------------------------NAV----------------------------*/
 .logo{
     width: 45px;
     padding:20px;
-    border-radius: 40px;
+    border-radius: 70px;
 }
 nav ul{
     float: right;
@@ -42,4 +41,58 @@ nav ul li a{
 ul li{
     font-size: 20px;
 }
+/*--------------------------FORM----------------------------*/
+form{
+    text-align: center;
+}
+
+.btn-form{
+    padding: 5px;
+    padding-bottom: 15px;
+}
+
+.formulario h1{
+    text-align: center;
+    padding: 10px;
+    color: white;
+}
+
+
+.formulario h2{
+    padding: 10px;
+    color: white;
+}
+
+.formulario #colors{
+    margin-top: 20px;
+}
+
+.formulario #fecha{
+    margin-top: 20px;
+}
+
+/*--------------------------FOOTER----------------------------*/
+
+footer ul {
+    background:  #e4d595; 
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+footer ul li {
+    display: inline-block; 
+    margin-right: 10px;   
+}
+
+footer ul li a i {
+    font-size: 30px; 
+    color: white; 
+    padding-top: 20px;   
+}
+
+footer ul li a:hover i{
+    color: rgb(151, 56, 79);
+    transition: .5;
+} 
 
