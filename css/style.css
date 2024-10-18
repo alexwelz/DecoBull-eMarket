@@ -1,8 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     text-decoration: none;
     list-style: none;   
+}
+body{
+    font-family: "Afacad Flux", sans-serif;
 }
 
 header{
@@ -17,7 +22,7 @@ main{
 
 /*--------------------------NAV----------------------------*/
 .logo{
-    width: 45px;
+    width: 40px;
     padding:20px;
     border-radius: 70px;
 }
@@ -41,6 +46,12 @@ nav ul li a{
 ul li{
     font-size: 20px;
 }
+
+nav ul li a:hover{
+    color: rgb(151, 56, 79);
+    transition: .5;
+} 
+
 /*--------------------------FORM----------------------------*/
 form{
     text-align: center;
@@ -71,6 +82,20 @@ form{
     margin-top: 20px;
 }
 
+.datos-enviados{
+    text-align: center;
+    padding: 100px;
+    border: 3px solid;
+    margin-left: 35%;
+    margin-right: 35%;
+    
+}
+
+.formulario .box{
+    border: 3px solid;
+    margin-left: 30%;
+    margin-right: 30%;
+}
 /*--------------------------FOOTER----------------------------*/
 
 footer ul {
@@ -78,6 +103,7 @@ footer ul {
     color: white;
     text-align: center;
     padding: 30px;
+
 }
 
 footer ul li {
@@ -95,4 +121,5 @@ footer ul li a:hover i{
     color: rgb(151, 56, 79);
     transition: .5;
 } 
+
 
