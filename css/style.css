@@ -11,13 +11,13 @@ body{
 }
 
 header{
-    background:  #e4d595; 
+    background: #e4d595; 
     height: 74px;
 
 }
 main{
-
-    background:  #c1a188;
+    background:rgb(193, 161, 136);
+    
 }
 
 /*--------------------------NAV----------------------------*/
@@ -26,11 +26,17 @@ main{
     padding:20px;
     border-radius: 70px;
 }
+nav{
+    width: 100%;
+    position: relative;
+}
 nav ul{
     float: right;
     margin-right: 20px;
     padding: 5px;  
 }
+
+
  
 nav ul li{
     display: inline-block; 
@@ -51,6 +57,89 @@ nav ul li a:hover{
     color: rgb(151, 56, 79);
     transition: .5;
 } 
+
+@media (max-width: 768px) {
+    nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;    
+        padding: 10px 0;
+    }
+
+    .logo {
+        margin-right: 20px; 
+        padding: 0;        
+    }
+
+    nav ul {
+        float: none;      
+        margin-right: 0;   
+        padding: 0;        
+        display: flex;     
+        justify-content: center;
+        gap: 10px;         
+    }
+
+    nav ul li {
+        display: inline-block; 
+        padding-top: 0;       
+    }
+
+    nav ul li a {
+        font-size: 18px;       
+        padding: 10px;      
+    }
+}
+/*--------------------------CARDS----------------------------*/
+section h1{
+    text-align: center;
+    color: white;
+    padding-top: 40px;
+}
+
+.row{
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-around;
+    
+}
+.card{
+    background-color: rgba(242, 236, 236, .8);
+    margin:10px 10px 10px 10px;
+    border-radius: 6px;
+    border: solid 10px rgba(242, 236, 236, .8);
+} 
+
+.img-fluid{
+    border-radius: 6px;
+}
+.spaces-card{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.content h3, p{
+    color: rgba(16, 15, 15, 0.8);
+    text-align: center;
+}
+
+.btn{
+    background-color:rgb(165, 110, 82);
+    padding:10px;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+}
+
+.btn:hover{
+   box-shadow: 0 0 20px rgb(165, 110, 82);
+   color: white;
+}
 
 /*--------------------------FORM----------------------------*/
 form{
