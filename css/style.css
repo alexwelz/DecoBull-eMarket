@@ -10,6 +10,7 @@ body{
     font-family: "Afacad Flux", sans-serif;
 }
 
+
 header{
     background: #e4d595; 
     height: 74px;
@@ -91,11 +92,6 @@ nav ul li a:hover{
     }
 }
 /*--------------------------CARDS----------------------------*/
-section h1{
-    text-align: center;
-    color: white;
-    padding-top: 40px;
-}
 
 .row{
     box-sizing: border-box;
@@ -107,10 +103,10 @@ section h1{
     
 }
 .card{
-    background-color: rgba(242, 236, 236, .8);
+    background-color: white;
     margin:10px 10px 10px 10px;
     border-radius: 6px;
-    border: solid 10px rgba(242, 236, 236, .8);
+    border: solid 10px white;
 } 
 
 .img-fluid{
@@ -139,6 +135,28 @@ section h1{
 .btn:hover{
    box-shadow: 0 0 20px rgb(165, 110, 82);
    color: white;
+}
+
+/*--------------------------CARDS PRODUCTOS----------------------------*/
+main h1{
+    text-align: center;
+    color: white;
+    padding-top: 40px;
+}
+.tazas{
+    align-items: center;
+    color: white;
+}
+.juegos{
+    align-items: center;
+    color: white;
+}
+
+/*--------------------------NOVEDADES----------------------------*/
+.novedades{
+    text-align: center;
+    color: white;
+    padding-top: 40px;
 }
 
 /*--------------------------FORM----------------------------*/
