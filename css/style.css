@@ -12,13 +12,9 @@ body{
 
 
 header{
-    background: #e4d595; 
+    background: #fae4d9; 
     height: 74px;
 
-}
-main{
-    background:rgb(193, 161, 136);
-    
 }
 
 /*--------------------------NAV----------------------------*/
@@ -47,7 +43,7 @@ nav ul li{
 
 nav ul li a{
     padding: 10px;
-    color: #fff;
+    color: #c1a188;
 }
 
 ul li{
@@ -55,7 +51,7 @@ ul li{
 }
 
 nav ul li a:hover{
-    color: rgb(151, 56, 79);
+    color: white;
     transition: .5;
 } 
 
@@ -103,10 +99,10 @@ nav ul li a:hover{
     
 }
 .card{
-    background-color: white;
+    background-color: #fae4d9;
     margin:10px 10px 10px 10px;
     border-radius: 6px;
-    border: solid 10px white;
+    border: solid 10px #fae4d9;
 } 
 
 .img-fluid{
@@ -123,7 +119,7 @@ nav ul li a:hover{
 }
 
 .btn{
-    background-color:rgb(165, 110, 82);
+    background-color: #c1a188;
     padding:10px;
     color: white;
     border-radius: 6px;
@@ -140,22 +136,22 @@ nav ul li a:hover{
 /*--------------------------CARDS PRODUCTOS----------------------------*/
 main h1{
     text-align: center;
-    color: white;
+    color: #c1a188;
     padding-top: 40px;
 }
 .tazas{
     align-items: center;
-    color: white;
+    color: #c1a188;
 }
 .juegos{
     align-items: center;
-    color: white;
+    color: #c1a188;
 }
 
 /*--------------------------NOVEDADES----------------------------*/
 .novedades{
     text-align: center;
-    color: white;
+    color: #c1a188;
     padding-top: 40px;
 }
 
@@ -182,7 +178,7 @@ form{
 }
 
 .formulario #colors{
-    margin-top: 20px;
+    margin-top: 20px
 }
 
 .formulario #fecha{
@@ -199,15 +195,14 @@ form{
 }
 
 .formulario .box{
-    border: 3px solid;
-    margin-left: 30%;
-    margin-right: 30%;
+    margin-left: 20%;
+    margin-right: 20%;
 }
 /*--------------------------FOOTER----------------------------*/
 
 footer ul {
-    background:  #e4d595; 
-    color: white;
+    background:  #fae4d9; 
+    color: #c1a188;
     text-align: center;
     padding: 30px;
 
@@ -220,12 +215,12 @@ footer ul li {
 
 footer ul li a i {
     font-size: 30px; 
-    color: white; 
+    color: #c1a188;
     padding-top: 20px;   
 }
 
 footer ul li a:hover i{
-    color: rgb(151, 56, 79);
+    color: white;
     transition: .5;
 } 
 
