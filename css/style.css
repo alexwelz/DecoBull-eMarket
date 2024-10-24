@@ -12,16 +12,21 @@ body{
 
 
 header{
-    background: #fae4d9; 
+    background: #d6c8bc; 
     height: 74px;
 
 }
 
+
+
 /*--------------------------NAV----------------------------*/
 .logo{
-    width: 40px;
-    padding:20px;
+    position: sticky;
+    width: 100px;
+    margin-left:20px;
+    margin-top: 20px;
     border-radius: 70px;
+    background-color: white;
 }
 nav{
     width: 100%;
@@ -43,7 +48,7 @@ nav ul li{
 
 nav ul li a{
     padding: 10px;
-    color: #c1a188;
+    color: #7b6552;
 }
 
 ul li{
@@ -54,6 +59,13 @@ nav ul li a:hover{
     color: white;
     transition: .5;
 } 
+
+.btnCart{
+    padding:4px;
+    color: #7b6552;
+    position: sticky;
+    border-radius: 50%;
+}
 
 @media (max-width: 768px) {
     nav {
@@ -96,13 +108,14 @@ nav ul li a:hover{
     align-items: center;
     justify-content: center;
     justify-content: space-around;
+
     
 }
 .card{
-    background-color: #fae4d9;
+    background-color: #d6c8bc;
     margin:10px 10px 10px 10px;
     border-radius: 6px;
-    border: solid 10px #fae4d9;
+    border: solid 10px #d6c8bc;
 } 
 
 .img-fluid{
@@ -111,6 +124,8 @@ nav ul li a:hover{
 .spaces-card{
     padding-top: 50px;
     padding-bottom: 50px;
+    grid-template-columns: repeat(5, 1fr); /* 5 columnas iguales */
+    gap: 20px; /* Espacio entre las cards */
 }
 
 .content h3, p{
@@ -119,7 +134,7 @@ nav ul li a:hover{
 }
 
 .btn{
-    background-color: #c1a188;
+    background-color: #7b6552;
     padding:10px;
     color: white;
     border-radius: 6px;
@@ -129,24 +144,44 @@ nav ul li a:hover{
 }
 
 .btn:hover{
-   box-shadow: 0 0 20px rgb(165, 110, 82);
+   box-shadow: 0 0 20px #7b6552;
    color: white;
 }
+/*--------------------------INDEX----------------------------*/
 
-/*--------------------------CARDS PRODUCTOS----------------------------*/
+.destacado h1{
+    font-size: 40px;
+}
+/*--------------------------PRODUCTOS----------------------------*/
 main h1{
     text-align: center;
-    color: #c1a188;
-    padding-top: 40px;
+    color: #7b6552;
+    padding: 40px;
+    font-size: 40px;
 }
 .tazas{
     align-items: center;
-    color: #c1a188;
+    color: #7b6552;
+}
+.tazas div h2{
+    padding-left: 50%;
+    background-color: #7b6552;
+    color: white;
+    align-items: center;
 }
 .juegos{
     align-items: center;
-    color: #c1a188;
+    color: #7b6552;
+   
 }
+.juegos div h2{
+   padding-left: 50%;
+    background-color: #7b6552;
+    color: white;
+    align-items: center;
+}
+
+
 
 /*--------------------------NOVEDADES----------------------------*/
 .novedades{
@@ -155,7 +190,7 @@ main h1{
     padding-top: 40px;
 }
 
-/*--------------------------FORM----------------------------*/
+/*--------------------------CONTACTOS----------------------------*/
 form{
     text-align: center;
 }
@@ -168,13 +203,13 @@ form{
 .formulario h1{
     text-align: center;
     padding: 10px;
-    color: white;
+    color: #c1a188;
 }
 
 
 .formulario h2{
     padding: 10px;
-    color: white;
+    color: #c1a188;
 }
 
 .formulario #colors{
@@ -195,14 +230,14 @@ form{
 }
 
 .formulario .box{
-    margin-left: 20%;
-    margin-right: 20%;
+    *margin-left: 20%;
+    *margin-right: 20%;
 }
 /*--------------------------FOOTER----------------------------*/
 
 footer ul {
-    background:  #fae4d9; 
-    color: #c1a188;
+    background:  #d6c8bc; 
+    color: #7b6552;
     text-align: center;
     padding: 30px;
 
@@ -215,7 +250,7 @@ footer ul li {
 
 footer ul li a i {
     font-size: 30px; 
-    color: #c1a188;
+    color: #7b6552;
     padding-top: 20px;   
 }
 

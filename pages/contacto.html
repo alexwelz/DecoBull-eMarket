@@ -9,7 +9,7 @@
      <!-- fontawesome icon -->
       <script src="https://kit.fontawesome.com/fcc39418f4.js" crossorigin="anonymous"></script>
      <!-- Favicon -->
-     <link rel="shortcut icon" href="/assets/img/logoDeco.png" type="image/x-icon">
+     <link rel="shortcut icon" href="../assets/img/logoDeco.png" type="image/x-icon">
     <title>Contacto</title>
 </head>
 <body>
@@ -21,52 +21,61 @@
                 <li><a href="productos.html">Productos</a></li>
                 <li><a href="novedades.html">Novedades</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
+                <a href="" class="btnCart" title="Carrito"><i class="fa-solid fa-cart-shopping"></i></a>
             </ul>
         </nav>
     </header>
     <main>
         <section class="formulario">
             <div class="box">
-                <h1>Contactanos</h1>
-                <form action="datos.html">
-                    <label for=""></label>
-                    <input type="text" placeholder="Nombre" maxlength="20" required>
-                    <br>
-                    <input type="text" placeholder="Apellido" maxlength="20" required>
-                    <br>
-                    <input type="email" placeholder="Correo" maxlength="15" required>
-                    <br>
-                    <input type="number" placeholder="Celular" required>
-                    <br>
-                    <textarea name="comments" cols="30" rows="10" placeholder="Comentario"></textarea>
-                    <br>
-                    <h2>Productos</h2>
-                    <input type="radio" name="productos" id="">Cocina
-                    <input type="radio" name="productos" id="">Decoración
-                
-                    <h2>Cocina</h2>
-                    <input type="checkbox" name="cocina" id="">Tazas
-                    <input type="checkbox" name="cocina" id="">Platos
-                    <input type="checkbox" name="cocina" id="">Vasos
-                    <input type="checkbox" name="cocina" id="">Bowls
-                    <input type="checkbox" name="cocina" id="">Jarras
-                    <br>      
-                    <select name="" id="colors">
-                        <option value="colores">Gris</option>
-                        <option value="colores">Marmolado</option>
-                        <option value="colores">Blanco</option>
-                        <option value="colores">Azulado</option>
-                    </select>
-                    <br><br>
-                    
-                    <h2>Fecha de entrega</h2>
-                    <input type="date" id="fecha">
-                    <br><br>
-                    <div class="btn-form">
-                        <input type="submit" value="Enviar">
-                        <input type="reset" value="Borrar">
+                <div class="row spaces-card">
+                    <div class="col-3">
+                        <article class="card">
+                            <div class="content">
+                                <h1>Contactanos</h1>
+                                <form action="datos.html">
+                                    <label for=""></label>
+                                    <input type="text" placeholder="Nombre" maxlength="20" required>
+                                    <br>
+                                    <input type="text" placeholder="Apellido" maxlength="20" required>
+                                    <br>
+                                    <input type="email" placeholder="Correo" maxlength="15" required>
+                                    <br>
+                                    <input type="number" placeholder="Celular" required>
+                                    <br>
+                                    <textarea name="comments" cols="30" rows="10" placeholder="Comentario"></textarea>
+                                    <br>
+                                    <h2>Productos</h2>
+                                    <input type="radio" name="productos" id="">Cocina
+                                    <input type="radio" name="productos" id="">Decoración
+                                
+                                    <h2>Cocina</h2>
+                                    <input type="checkbox" name="cocina" id="">Tazas
+                                    <input type="checkbox" name="cocina" id="">Platos
+                                    <input type="checkbox" name="cocina" id="">Vasos
+                                    <input type="checkbox" name="cocina" id="">Bowls
+                                    <input type="checkbox" name="cocina" id="">Jarras
+                                    <br>      
+                                    <select name="" id="colors">
+                                        <option value="colores">Gris</option>
+                                        <option value="colores">Marmolado</option>
+                                        <option value="colores">Blanco</option>
+                                        <option value="colores">Azulado</option>
+                                    </select>
+                                    <br><br>
+                                    
+                                    <h2>Fecha de entrega</h2>
+                                    <input type="date" id="fecha">
+                                    <br><br>
+                                    <div class="btn-form">
+                                        <input type="submit" value="Enviar">
+                                        <input type="reset" value="Borrar">
+                                    </div>
+                                </form>
+                            </div>
+                        </article>
                     </div>
-                </form>
+                </div>
             </div>
         </section>
     </main>
