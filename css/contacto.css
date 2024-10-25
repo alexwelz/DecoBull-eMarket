@@ -1,0 +1,38 @@
+
+form{
+    text-align: center;
+}
+
+.btn-form{
+    padding: 5px;
+    padding-bottom: 15px;
+}
+
+.formulario h1{
+    text-align: center;
+    padding: 10px;
+    color: #c1a188;
+}
+
+
+.formulario h2{
+    padding: 10px;
+    color: #c1a188;
+}
+
+.formulario #colors{
+    margin-top: 20px
+}
+
+.formulario #fecha{
+    margin-top: 20px;
+}
+
+.datos-enviados{
+    text-align: center;
+    padding: 100px;
+    border: 3px solid;
+    margin-left: 35%;
+    margin-right: 35%;
+
+}
