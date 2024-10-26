@@ -180,6 +180,8 @@ footer ul li a:hover i{
 @media(max-width:800px){
    .logo{
         z-index: 100;
+        width: 70px;
+        margin-top: 40px;
    }
     .checkbtn{
         display: block;
