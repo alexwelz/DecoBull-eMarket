@@ -82,13 +82,13 @@ nav ul li a:hover{
     color: #7b6552;
     position: sticky;
     border-radius: 50%;
-    padding-bottom: 20px;
 }
 
 /*--------------------------CARDS----------------------------*/
 
 .main-container {
-    margin: 2%;
+    margin: 5%;
+    width: 90%;
 } 
 
 .cards-container {
@@ -121,7 +121,7 @@ nav ul li a:hover{
 }
 
 .add-cart {
-    background-color: #7b6552;
+    background-color: #d6c8bc;
     padding:10px;
     color: white;
     border-radius: 0 0 4px 4px;
@@ -130,7 +130,7 @@ nav ul li a:hover{
     display: block;
 } 
 .add-cart:hover{
-    box-shadow: 0 0 20px #7b6552;
+    box-shadow: 0 0 20px #d6c8bc;
     color: white;
  }
 
@@ -138,7 +138,7 @@ nav ul li a:hover{
 @media (max-width:800px) {
     
     .cards-container {
-        grid-template-columns: repeat(auto-fill, 170px);
+        grid-template-columns: repeat(auto-fill, 240px);
     }
 
     .article-card  {
@@ -176,31 +176,8 @@ footer ul li a:hover i{
 
 
 /*--------------------------NAV----------------------------*/
-@media(max-width: 952px){
-    .logo{
-        z-index: 100;
-        width: 70px;
-        margin-top: 40px;
-   }
-    nav ul li a{
-        font-size: 16px;
-    }
-    .mobile{
-        position: absolute;
-        width: 100%;
-        height: auto;
-        background: #d6c8bc;
-        top: 80px;
-        left: 100%;
-        text-align: center;
-        transition: all .5s;
-        display: flex; 
-        flex-direction: column;
-        align-items: center;
 
-    }
-}
-@media(max-width:858px){
+@media(max-width:800px){
    .logo{
         z-index: 100;
    }
@@ -213,13 +190,11 @@ footer ul li a:hover i{
         height: auto;
         background: #d6c8bc;
         top: 80px;
-        left: 100%;
         text-align: center;
         transition: all .5s;
-        display: flex; 
-        flex-direction: column;
-        align-items: center;
-
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.3s ease;
     }
 
     nav ul li{
@@ -227,12 +202,20 @@ footer ul li a:hover i{
         margin: 5% 0;
         line-height: 30px;
     }
-    nav ul li a{
-        font-size:20px;
-    }
 
     #check:checked ~ ul{
         left: 0;
-
+    }  
+  
+    #check:checked ~ .mobile {
+        max-height: 300px; 
     }
+    .checkbtn {
+        cursor: pointer;
+    
+    }
+    .mobile {
+        display: block;
+    }
+
 }
