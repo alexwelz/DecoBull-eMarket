@@ -188,7 +188,9 @@ footer ul {
     padding: 30px;
 
 }
-
+footer ul h3{
+    font-size: 25px;
+}
 footer ul li {
     display: inline-block;
     margin-right: 10px;
@@ -205,10 +207,34 @@ footer ul li a:hover i{
     transition: .5;
 }
 
+.icon-whatsapp{
+    position: fixed;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    bottom: 30px;
+    right: 30px;
+    background: #08e02c;
+    color: #fff;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.3);
+    z-index: 100px;
+}
 
-/*--------------------------NAV----------------------------*/
+.icon-whatsapp:hover{
+    text-decoration: none;
+    color: #0df053;
+    background: #fff;
+}
+
+footer ul .icon-instagram i{
+    margin-left: 11px;
+}
 
 @media(max-width:800px){
+    /*--------------------------NAV----------------------------*/
     .logo{
          z-index: 100;
          width: 70px;
@@ -269,11 +295,8 @@ footer ul li a:hover i{
         display: block;
     }
 
-}
-/*--------------------------CARDS----------------------------*/
 
- @media (max-width:800px) {
-    
+    /*--------------------------CARDS----------------------------*/
     .cards-container {
         grid-template-columns: repeat(auto-fill, 240px);
     }
@@ -283,4 +306,27 @@ footer ul li a:hover i{
         margin-bottom: 10px;
     }
 
+    /*--------------------------Icon whatsapp----------------------------*/
+    .icon-whatsapp{
+        position: fixed;
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+        bottom: 25px;
+        right: 25px;
+        background: #08e02c;
+        color: #fff;
+        border-radius: 50px;
+        text-align: center;
+        font-size: 20px;
+        box-shadow: 0px 1px 10px rgba(0,0,0,0.3);
+        z-index: 100px;
+    }
+    
+    .icon-whatsapp:hover{
+        text-decoration: none;
+        color: #0df053;
+        background: #fff;
+    }
+   
 }
