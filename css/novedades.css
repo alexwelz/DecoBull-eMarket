@@ -1,6 +1,28 @@
 
 .novedades{
     text-align: center;
+}
+
+.novedades h1{
     color: #c1a188;
     padding-top: 40px;
+}
+
+.novedades h2{
+    text-align: center;
+    color: #c1a188;
+    padding-top: 40px;
+}
+.novedades p{
+    margin-bottom: 2px;
+    font-size: 20px;
+    margin: 0 10px 0px 10px;
+}
+
+.novedades img{
+    margin-top: 20px;
+}
+.novedades video{
+    width: 40%;
+    margin-bottom: 20px;
 }
