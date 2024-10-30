@@ -179,6 +179,28 @@ nav ul li a:hover{
  .article-card h3 {
     margin-top: 15px;
 }
+
+
+.reseñas {
+    text-align: center;
+}
+.reseñas h2{
+    color: #c1a188;
+}
+.reseñas-card {
+    padding: 20px;
+    margin: 20px;
+    transition: transform 0.3s ease;
+    border-radius: 5%;
+    background-color: #efedea;
+    display: inline-block;
+    text-align: center;
+}
+
+.reseñas-card:hover {
+    transform: translateY(3px);
+}
+
 /*--------------------------FOOTER----------------------------*/
 
 footer ul {
