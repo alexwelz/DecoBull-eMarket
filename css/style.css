@@ -180,26 +180,37 @@ nav ul li a:hover{
     margin-top: 15px;
 }
 
-
+/*--------------------------RESEÑAS----------------------------*/
 .reseñas {
     text-align: center;
 }
-.reseñas h2{
+
+.reseñas h2 {
     color: #c1a188;
 }
+
+.reseñas-container {
+    padding: 0 20px;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
 .reseñas-card {
     padding: 20px;
-    margin: 20px;
     transition: transform 0.3s ease;
     border-radius: 5%;
-    background-color: #efedea;
-    display: inline-block;
+    background-color: #fff;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
     text-align: center;
+    margin-bottom: 20px;
 }
 
 .reseñas-card:hover {
     transform: translateY(3px);
 }
+
 
 /*--------------------------FOOTER----------------------------*/
 
@@ -222,6 +233,7 @@ footer ul li a i {
     font-size: 30px;
     color: #7b6552;
     padding-top: 20px;
+    margin-bottom: 20px;
 }
 
 footer ul li a:hover i{
@@ -249,10 +261,6 @@ footer ul li a:hover i{
     text-decoration: none;
     color: #0df053;
     background: #fff;
-}
-
-footer ul .icon-instagram i{
-    margin-left: 11px;
 }
 
 @media(max-width:800px){
@@ -326,29 +334,6 @@ footer ul .icon-instagram i{
     .article-card  {
         font-size: 1.2rem;
         margin-bottom: 10px;
-    }
-
-    /*--------------------------Icon whatsapp----------------------------*/
-    .icon-whatsapp{
-        position: fixed;
-        width: 35px;
-        height: 35px;
-        line-height: 35px;
-        bottom: 25px;
-        right: 25px;
-        background: #08e02c;
-        color: #fff;
-        border-radius: 50px;
-        text-align: center;
-        font-size: 20px;
-        box-shadow: 0px 1px 10px rgba(0,0,0,0.3);
-        z-index: 100px;
-    }
-    
-    .icon-whatsapp:hover{
-        text-decoration: none;
-        color: #0df053;
-        background: #fff;
     }
    
 }
