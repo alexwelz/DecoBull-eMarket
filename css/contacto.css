@@ -1,5 +1,4 @@
-
-.contact h2{
+.contact h2 {
     text-align: center;
     padding: 20px;
     margin-top: 30px;
@@ -7,40 +6,32 @@
     color: #c1a188;
 }
 
-.contact form{
+.contact form {
     max-width: 50rem;
     margin: 1rem auto;
     text-align: center;
     margin-bottom: 1rem;
 }
 
-
 .contact form .input-box input,
-.contact form textarea{
+.contact form textarea {
     width: 70%;
     padding: 1.5rem;
     font-size: 1.6rem;
-
     border-radius: .8rem;
     margin: 1.1rem 0;
 }
 
-.contact form .input-box input {
-    width: 70%;
-
-}
-
-.contact form textarea{
+.contact form textarea {
     resize: none;
 }
 
-.contact form .btn{
+.contact form .btn {
     margin-top: 2rem;
     cursor: pointer;
 }
 
-
-.btnContact{
+.btnContact {
     display: inline-block;
     flex-direction: column;
     align-items: center;
@@ -52,9 +43,33 @@
     background-color: #d6c8bc;
     color: white;
     border: none;
-
 }
-.btnContact:hover{
+
+.btnContact:hover {
     box-shadow: 0 0 20px #d6c8bc;
     cursor: pointer;
+}
+
+
+@media (max-width: 800px) {
+    .contact h2 {
+        font-size: 40px;
+        margin-top: 40px;
+    }
+
+    .contact form .input-box input,
+    .contact form textarea {
+        width: 90%; 
+        padding: 1rem;
+        font-size: 1.4rem;
+    }
+
+    .contact form {
+        max-width: 90%; 
+        padding: 1rem;
+    }
+
+    .btnContact {
+        margin-bottom: 10px;
+    }
 }
