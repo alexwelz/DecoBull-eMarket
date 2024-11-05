@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+input{
+    font: inherit;
+}
+.search{
+    display: flex;
+
+}
+form{
+    margin-top: 50px;
+    margin-left: 20%;
+    position: sticky;
+
+}
+form div{
+    display: flex;
+    padding: 9px 20px 5px 26px;
+    border-radius: 30px;
+    border: 2px solid #9fa5abb1;
+
+}
+form input{
+    border: none;
+    background: transparent;
+    font-weight: bold;
+    padding-left: 24px;
+    background-image: url(https://w7.pngwing.com/pngs/608/913/png-transparent-computer-icons-google-search-symbol-mobile-search-search-for-miscellaneous-logo-mobile-phones-thumbnail.png);
+    background-size: 15px;
+    background-repeat: no-repeat;
+
+}
+form input:focus{
+    outline: none;
+}
