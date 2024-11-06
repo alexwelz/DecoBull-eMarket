@@ -3,6 +3,7 @@
     padding: 0;
 }
 
+/*--------------------------BUSCADOR----------------------------*/
 input{
     font: inherit;
 }
@@ -11,8 +12,9 @@ input{
 
 }
 form{
-    margin-top: 50px;
-    margin-left: 20%;
+     margin-top: 100px;
+    margin-left: 40%;
+    margin-right: 40%; 
     position: sticky;
 
 }
@@ -35,4 +37,20 @@ form input{
 }
 form input:focus{
     outline: none;
+}
+
+#buscador{
+    width: 90%;
+}
+
+@media(max-width:800px){
+
+    form{
+       margin-top: 100px;
+       margin-left: 30%;
+       margin-right: 30%; 
+       position: sticky;
+   
+   }
+
 }
