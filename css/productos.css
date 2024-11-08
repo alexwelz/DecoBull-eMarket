@@ -43,12 +43,23 @@ form input:focus{
     width: 90%;
 }
 
+@media(max-width:1500px){
+
+    form{
+        margin-top: 100px;
+        margin-left: 30%;
+        margin-right: 30%; 
+        position: sticky;
+    
+    }
+
+}
 @media(max-width:800px){
 
     form{
        margin-top: 100px;
-       margin-left: 30%;
-       margin-right: 30%; 
+       margin-left: 20%;
+       margin-right: 20%; 
        position: sticky;
    
    }

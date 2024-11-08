@@ -125,7 +125,19 @@ nav ul li a:hover{
     display: block;
 }
 
-
+.count_cart {
+    position: fixed;
+    padding: 9px;
+    top: 15px; 
+    right: 5px;
+    height: 2px;
+    background-color: #7b6552;
+    border-radius: 50%;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
 /*--------------------------BANNER----------------------------*/
 
 .slide img {
@@ -345,7 +357,20 @@ footer ul li a:hover i{
          line-height: 20px;       
      }
 
-     
+     .count_cart {
+        position: absolute;
+        padding: 9px;
+        top: 80%; 
+        right: 42%;
+        height: 2px;
+        background-color: #7b6552;
+        border-radius: 50%;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    } 
+
      #check:checked ~ ul{
          left: 0;
      }  
@@ -410,6 +435,7 @@ footer ul li a:hover i{
     .slides {
         height: 30vh;
     }
+
 }
 
 @media (max-width: 570px) {
