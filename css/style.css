@@ -328,80 +328,85 @@ footer ul li a:hover i{
 }
 
 @media(max-width:800px){
-    /*--------------------------NAV----------------------------*/
-    .logo{
-         z-index: 100;
-         width: 70px;
-         margin-top: 40px;
+       /*--------------------------NAV----------------------------*/
+       .logo{
+        z-index: 100;
+        width: 70px;
+        margin-top: 40px;
+   }
+    .checkbtn{
+        display: block;
     }
-     .checkbtn{
-         display: block;
-     }
-     .mobile{
-         position: absolute;
-         width: 100%;
-         height: auto;
-         background: #d6c8bc;
-         top: 80px;
-         text-align: center;
-         transition: all .5s;
-         overflow: hidden;
-         max-height: 0;
-        
-     }
-    
- 
-     nav ul li{
-         display: block;
-         margin: 10% 0;
-         line-height: 20px;       
-     }
-
-     .count_cart {
+    .mobile{
         position: absolute;
-        padding: 9px;
-        top: 80%; 
-        right: 42%;
-        height: 2px;
-        background-color: #7b6552;
-        border-radius: 50%;
-        color: #fff;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    } 
-
-     #check:checked ~ ul{
-         left: 0;
-     }  
+        width: 100%;
+        height: auto;
+        background: #d6c8bc;
+        top: 80px;
+        text-align: center;
+        transition: all .5s;
+        overflow: hidden;
+        max-height: 0;
+       
+    }
    
-     #check:checked ~ .mobile {
-         max-height: 70vh; 
-     }
-     .checkbtn {
-         cursor: pointer;
-     
-     }
-     .mobile {
-         display: block;
-     }
- 
- 
-    .dropdown-content {
-        position: static;
-        box-shadow: none;
-        background-color: transparent;
+
+    nav ul li{
+        display: block;
+        margin: 10% 0;
+        line-height: 20px;       
     }
 
-    .dropdown-content li a {
-        color: #7b6552;
-        padding: 10px;
-    }
+    .count_cart {
+       position: absolute;
+       padding: 9px;
+       top: 80%; 
+       right: 42%;
+       height: 2px;
+       background-color: #7b6552;
+       border-radius: 50%;
+       color: #fff;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+   } 
 
-    .dropdown:hover .dropdown-content {
+    #check:checked ~ ul{
+        left: 0;
+    }  
+  
+    #check:checked ~ .mobile {
+        max-height: 70vh; 
+    }
+    .checkbtn {
+        cursor: pointer;
+    
+    }
+    .mobile {
         display: block;
     }
 
+   .dropdown-content {
+       position: absolute;
+       background-color: #fff; 
+       box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+       border-radius: 8px;
+       top: 20%;
+       left: 79%;
+       transform: translateX(-55%); 
+       z-index: 100; 
+   }
+   .dropdown-content li a {
+       color: #7b6552;
+       padding: 2px;
+   }
+
+   .dropdown:hover .dropdown-content {
+       display: block;
+       margin-bottom: 15px;
+
+   }
+ 
 
     /*--------------------------CARDS----------------------------*/
     .cards-container {
