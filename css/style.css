@@ -228,13 +228,17 @@ nav ul li a:hover{
 
 .add-cart {
     background-color: #d6c8bc;
-    padding:10px;
     color: white;
     border-radius: 0 0 4px 4px;
     text-decoration: none;
     text-align: center;
-    display: block;
-} 
+    display: block; 
+    width: 100%;
+    padding: 10px; 
+    box-sizing: border-box;
+    border: none; 
+    font-size: 20px;
+}
 .add-cart:hover{
     box-shadow: 0 0 20px #d6c8bc;
     color: white;
