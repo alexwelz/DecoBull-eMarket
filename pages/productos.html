@@ -30,16 +30,18 @@
                     <li><a href="novedades.html">Novedades</a></li>
                     <li><a href="contacto.html">Contacto</a></li>
                     <li class="dropdown">
-                        <a href="#" title="Iniciar sesión"><i class="fa-solid fa-user"></i></a>
+                        <a href="#" title="Iniciar sesión">
+                            <i class="fa-solid fa-user"></i>
+                            <span id="userNameSpan"></span>
+                        </a>
                         <ul class="dropdown-content">
-                            <li><a href="login.html">Iniciar sesión</a></li>
-                            <li><a href="registrarse.html">Registrarse</a></li>
+                            <li><a href="login.html" id="loginButton">Iniciar sesión</a></li>
+                            <li id="logoutButton">Cerrar Sesión</li>
+                            <li><a href="registrarse.html" id="signupButton">Registrarse</a></li>
                         </ul>
                     </li>
-                    <li>
-                        <a href="../pages/carrito.html" class="btnCart" title="Carrito"><i class="fa-solid fa-cart-shopping"></i></a>
-                        <span class="count_cart"></span>
-                    </li>
+                    <li><a href="carrito.html" class="btnCart" title="Carrito"><i class="fa-solid fa-cart-shopping"></i></a>
+                        <span class="count_cart">0</span></li>
                 </ul>
            </nav>
     </header>
@@ -576,7 +578,15 @@
             <li><a class="logo-email" href="mailto:deco.bull2023@gmail.com" target="_blank"><i class="fa-solid fa-square-envelope"></i></a></li>
          </ul>
     </footer>
-    <script src="../js/buscador.js"></script>
-    <script src="../js/script.js"></script>
+   <!-- Modal -->
+   <div id="logoutModal" class="modal" style="display: none;">
+    <div class="modal-content">
+        <p>¿Realmente desea salir?</p>
+        <button id="confirmLogout" class="btnModal">Sí</button>
+        <button id="cancelLogout" class="btnModal">No</button>
+    </div>
+</div>
+<script src="../js/buscador.js"></script>
+<script src="../js/script.js"></script>
 </body>
 </html>

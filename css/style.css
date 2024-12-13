@@ -66,6 +66,24 @@ nav ul li a:hover{
     color: white;
     transition: .5;
 }
+
+
+nav ul li{
+    color: #7b6552;
+    font-size: 20px;
+    border-radius: 3px;
+    text-align: center;
+}
+
+nav ul li:hover{
+    color: white;
+    transition: .5;
+    cursor: pointer;
+}
+#logoutButton:hover{
+    background-color:#7b6552;
+}
+
 .checkbtn{
     font-size:30px ;
     color: white;
@@ -97,7 +115,6 @@ nav ul li a:hover{
     position: absolute;
     background-color: #d6c8bc;
     min-width: 150px;
-
     border-radius: 5px;
     top: 80px;
     right: -54px;
@@ -138,6 +155,44 @@ nav ul li a:hover{
     align-items: center;
     justify-content: center;
 } 
+
+
+.modal {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    z-index: 100;
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.btnModal{
+    display: inline-block;
+    border-radius: 10%;
+    margin-right: 10px;
+    padding: 10px;
+    background-color: #d6c8bc;
+    color: white;
+    border: none;
+    margin-top: 20px;
+}
+.btnModal:hover{
+    box-shadow: 0 0 20px #d6c8bc;
+    cursor: pointer;
+}
+
 /*--------------------------BANNER----------------------------*/
 
 .slide img {
@@ -238,7 +293,6 @@ nav ul li a:hover{
     box-sizing: border-box;
     border: none; 
     font-size: 20px;
-    cursor: pointer;
 }
 .add-cart:hover{
     box-shadow: 0 0 20px #d6c8bc;
@@ -332,143 +386,144 @@ footer ul li a:hover i{
     background: #fff;
 }
 
+
 @media(max-width:800px){
-       /*--------------------------NAV----------------------------*/
-       .logo{
-        z-index: 100;
-        width: 70px;
-        margin-top: 40px;
-   }
-    .checkbtn{
-        display: block;
-    }
-    .mobile{
-        position: absolute;
-        width: 100%;
-        height: auto;
-        background: #d6c8bc;
-        top: 80px;
-        text-align: center;
-        transition: all .5s;
-        overflow: hidden;
-        max-height: 0;
-       
-    }
-   
-
-    nav ul li{
-        display: block;
-        margin: 10% 0;
-        line-height: 20px;       
-    }
-
-    .count_cart {
-       position: absolute;
-       padding: 9px;
-       top: 80%; 
-       right: 42%;
-       height: 2px;
-       background-color: #7b6552;
-       border-radius: 50%;
-       color: #fff;
-       display: flex;
-       align-items: center;
-       justify-content: center;
-   } 
-
-    #check:checked ~ ul{
-        left: 0;
-    }  
-  
-    #check:checked ~ .mobile {
-        max-height: 70vh; 
-    }
-    .checkbtn {
-        cursor: pointer;
+    /*--------------------------NAV----------------------------*/
+    .logo{
+     z-index: 100;
+     width: 70px;
+     margin-top: 40px;
+}
+ .checkbtn{
+     display: block;
+ }
+ .mobile{
+     position: absolute;
+     width: 100%;
+     height: auto;
+     background: #d6c8bc;
+     top: 80px;
+     text-align: center;
+     transition: all .5s;
+     overflow: hidden;
+     max-height: 0;
     
-    }
-    .mobile {
-        display: block;
-    }
+ }
 
-   .dropdown-content {
-       position: absolute;
-       background-color: #fff; 
-       box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-       border-radius: 8px;
-       top: 20%;
-       left: 79%;
-       transform: translateX(-55%); 
-       z-index: 100; 
-   }
-   .dropdown-content li a {
-       color: #7b6552;
-       padding: 2px;
-   }
 
-   .dropdown:hover .dropdown-content {
-       display: block;
-       margin-bottom: 15px;
+ nav ul li{
+     display: block;
+     margin: 10% 0;
+     line-height: 20px;       
+ }
 
-   }
+ .count_cart {
+    position: absolute;
+    padding: 9px;
+    top: 80%; 
+    right: 42%;
+    height: 2px;
+    background-color: #7b6552;
+    border-radius: 50%;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+
+ #check:checked ~ ul{
+     left: 0;
+ }  
+
+ #check:checked ~ .mobile {
+     max-height: 70vh; 
+ }
+ .checkbtn {
+     cursor: pointer;
  
+ }
+ .mobile {
+     display: block;
+ }
 
-    /*--------------------------CARDS----------------------------*/
-    .cards-container {
-        grid-template-columns: repeat(auto-fill, 240px);
-    }
+.dropdown-content {
+    position: absolute;
+    background-color: #fff; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    top: 20%;
+    left: 79%;
+    transform: translateX(-55%); 
+    z-index: 100; 
+}
+.dropdown-content li a {
+    color: #7b6552;
+    padding: 2px;
+}
 
-    .article-card  {
-        font-size: 1.2rem;
-        margin-bottom: 10px;
-    }
-   
+.dropdown:hover .dropdown-content {
+    display: block;
+    margin-bottom: 15px;
+
+}
+
+
+ /*--------------------------CARDS----------------------------*/
+ .cards-container {
+     grid-template-columns: repeat(auto-fill, 240px);
+ }
+
+ .article-card  {
+     font-size: 1.2rem;
+     margin-bottom: 10px;
+ }
+
 }
 /*--------------------------BANNER----------------------------*/
 
 @media (max-width: 1400px) {
-    .slides {
-        height: 60vh;
-    }
+ .slides {
+     height: 60vh;
+ }
 }
 @media (max-width: 1200px) {
-    .slides {
-        height: 50vh;
-    }
+ .slides {
+     height: 50vh;
+ }
 }
 @media (max-width: 950px) {
-    .slides {
-        height: 40vh;
-    }
+ .slides {
+     height: 40vh;
+ }
 }
 @media (max-width: 768px) {
-    .slides {
-        height: 30vh;
-    }
+ .slides {
+     height: 30vh;
+ }
 
 }
 
 @media (max-width: 570px) {
-    .slides {
-        height: 25vh;
-        margin-left: 1%;
-        margin-right: 1%;
-    }
+ .slides {
+     height: 25vh;
+     margin-left: 1%;
+     margin-right: 1%;
+ }
 }
 
 @media (max-width: 456px) {
-    .slides {
-        height: 20vh;
-        margin-left: 1%;
-        margin-right: 1%;
-    }
+ .slides {
+     height: 20vh;
+     margin-left: 1%;
+     margin-right: 1%;
+ }
 }
 
 @media (max-width: 380px) {
-    .slides {
-        height: 15vh;
-    }
-    .slide img {
-        object-fit: contain; 
-    }
+ .slides {
+     height: 15vh;
+ }
+ .slide img {
+     object-fit: contain; 
+ }
 }

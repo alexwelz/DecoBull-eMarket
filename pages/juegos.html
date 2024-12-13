@@ -22,7 +22,7 @@
             <label for="check" class="checkbtn">
                 <i class="bi bi-justify"></i>
             </label>
-            <label>
+            <label> 
                 <a href="../index.html"><img class="logo" src="../assets/img/logoDeco.png" alt="Logo emprendimiento"></a>
             </label>
                 <ul class="mobile">
@@ -31,16 +31,19 @@
                     <li><a href="novedades.html">Novedades</a></li>
                     <li><a href="contacto.html">Contacto</a></li>
                     <li class="dropdown">
-                        <a href="#" title="Iniciar sesión"><i class="fa-solid fa-user"></i></a>
+                        <a href="#" title="Iniciar sesión">
+                            <i class="fa-solid fa-user"></i>
+                            <span id="userNameSpan"></span>
+                        </a>
                         <ul class="dropdown-content">
-                            <li><a href="login.html">Iniciar sesión</a></li>
-                            <li><a href="registrarse.html">Registrarse</a></li>
+                            <li><a href="login.html" id="loginButton">Iniciar sesión</a></li>
+                            <li id="logoutButton">Cerrar Sesión</li>
+                            <li><a href="registrarse.html" id="signupButton">Registrarse</a></li>
                         </ul>
                     </li>
-                    <li>
-                        <a href="../pages/carrito.html" class="btnCart" title="Carrito"><i class="fa-solid fa-cart-shopping"></i></a>
-                        <span class="count_cart"></span>
-                    </li>
+                    <li><a href="carrito.html" class="btnCart" title="Carrito"><i class="fa-solid fa-cart-shopping"></i></a>
+                        <span class="count_cart">0</span></li>
+                    
                 </ul>
            </nav>
     </header>
@@ -95,6 +98,14 @@
             <br>
         </ul>
    </footer>
+    <!-- Modal -->
+    <div id="logoutModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <p>¿Realmente desea salir?</p>
+            <button id="confirmLogout" class="btnModal">Sí</button>
+            <button id="cancelLogout" class="btnModal">No</button>
+        </div>
+    </div>
    <!-- Boostrap -->
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
    <script src="../js/script.js"></script>
