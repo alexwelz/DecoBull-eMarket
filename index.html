@@ -20,7 +20,7 @@
             <label for="check" class="checkbtn">
                 <i class="bi bi-justify"></i>
             </label>
-            <label> 
+            <label>
                 <a href="index.html"><img class="logo" src="assets/img/logoDeco.png" alt="Logo emprendimiento"></a>
             </label>
                 <ul class="mobile">
@@ -29,17 +29,20 @@
                     <li><a href="pages/novedades.html">Novedades</a></li>
                     <li><a href="pages/contacto.html">Contacto</a></li>
                     <li class="dropdown">
-                        <a href="#" title="Iniciar sesión"><i class="fa-solid fa-user"></i></a>
+                        <a href="#" title="Iniciar sesión">
+                            <i class="fa-solid fa-user"></i>
+                            <span id="userNameSpan"></span>
+                        </a>
                         <ul class="dropdown-content">
-                            <li><a href="pages/login.html">Iniciar sesión</a></li>
-                            <li><a href="pages/registrarse.html">Registrarse</a></li>
+                            <li><a href="pages/login.html" id="loginButton">Iniciar sesión</a></li>
+                            <li id="logoutButton">Cerrar Sesión</li>
+                            <li><a href="pages/registrarse.html" id="signupButton">Registrarse</a></li>
                         </ul>
                     </li>
                     <li>
                         <a href="pages/carrito.html" class="btnCart" title="Carrito"><i class="fa-solid fa-cart-shopping"></i></a>
                         <span class="count_cart"></span>
                     </li>
-                    
                 </ul>
            </nav>
     </header>
@@ -147,6 +150,16 @@
             <li><a class="icon-email" href="mailto:deco.bull2023@gmail.com" target="_blank"><i class="fa-solid fa-square-envelope"></i></a></li>
         </ul>
    </footer>
+      <!-- Modal -->
+      <div id="logoutModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <p>¿Realmente desea salir?</p>
+            <button id="confirmLogout" class="btnModal">Sí</button>
+            <button id="cancelLogout" class="btnModal">No</button>
+        </div>
+    </div>
    <script src="js/script.js"></script>
+   <script src="js/registrarse.js"></script>
+   <script src="js/login.js"></script>
 </body>
 </html>

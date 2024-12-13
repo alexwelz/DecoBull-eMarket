@@ -23,40 +23,41 @@
             <label> 
                 <a href="../index.html"><img class="logo" src="../assets/img/logoDeco.png" alt="Logo emprendimiento"></a>
             </label>
-            <ul class="mobile">
-                <li><a href="../index.html">Inicio</a></li>
+                <ul class="mobile">
+                    <li><a href="../index.html">Inicio</a></li>
                     <li><a href="productos.html">Productos</a></li>
                     <li><a href="novedades.html">Novedades</a></li>
                     <li><a href="contacto.html">Contacto</a></li>
                     <li class="dropdown">
-                        <a href="#" title="Iniciar sesión"><i class="fa-solid fa-user"></i></a>
+                        <a href="#" title="Iniciar sesión">
+                            <i class="fa-solid fa-user"></i>
+                            <span id="userNameSpan"></span>
+                        </a>
                         <ul class="dropdown-content">
-                            <li><a href="login.html">Iniciar sesión</a></li>
-                            <li><a href="registrarse.html">Registrarse</a></li>
+                            <li><a href="login.html" id="loginButton">Iniciar sesión</a></li>
+                            <li><a href="registrarse.html" id="signupButton">Registrarse</a></li>
                         </ul>
                     </li>
-                    <li>
-                        <a href="../pages/carrito.html" class="btnCart" title="Carrito"><i class="fa-solid fa-cart-shopping"></i></a>
-                        <span class="count_cart"></span>
-                    </li>
+                    <li><a href="carrito.html" class="btnCart" title="Carrito"><i class="fa-solid fa-cart-shopping"></i></a>
+                        <span class="count_cart">0</span></li>
+                    
                 </ul>
            </nav>
-
     </header>
     <main>
         <section id="signIn">
             <h2>Registrarse</h2>
     
-            <form>
+            <form id="signupForm">
                 <div class="input-box">
-                    <input type="text" placeholder="Nombre" maxlength="40" name="name" required>
-                    <input type="Email" placeholder="Email"  maxlength="50"  name="email" required>
-                    <input type="password" placeholder="Contraseña" name="password" required>
+                    <input type="text"  id="name" placeholder="Nombre" maxlength="40" required autofocus>
+                    <input type="Email" placeholder="Email"  maxlength="50" id="email" required>
+                    <input type="password" placeholder="Contraseña" id="password" required>
                 </div>
                 <div id="liveAlertPlaceholder"></div>
-                <button type="submit"  class="btnSignIn" value="Registrarse"><a href="../index.html">Crear cuenta</a></button>
-              
+                <button type="submit" class="btnSignIn">Crear cuenta</button>
             </form>
+            <p>Ya tenes una cuenta? <a href="login.html">Login</a></p>
         </section>
         <a class="icon-whatsapp" href="https://wa.me/5491167219909?text=Hola%2C%20quisiera%20mas%20informacion" target="_blank">
             <i class="fa-brands fa-whatsapp"></i>
@@ -70,6 +71,7 @@
             <br>
         </ul>
    </footer>
+   <script src="../js/registrarse.js"></script>
    <script src="../js/script.js"></script>
 </body>
 </html>

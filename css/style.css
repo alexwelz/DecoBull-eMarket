@@ -238,6 +238,7 @@ nav ul li a:hover{
     box-sizing: border-box;
     border: none; 
     font-size: 20px;
+    cursor: pointer;
 }
 .add-cart:hover{
     box-shadow: 0 0 20px #d6c8bc;
