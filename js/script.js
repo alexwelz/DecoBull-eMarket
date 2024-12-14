@@ -1,6 +1,6 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const loggedInUser = JSON.parse(localStorage.getItem('login_success'));
-
+document.addEventListener("DOMContentLoaded", function () {
+  
+    const loggedInUser  = JSON.parse(localStorage.getItem('login_success'));
     const loginButton = document.querySelector('#loginButton');
     const signupButton = document.querySelector('#signupButton');
     const userNameSpan = document.querySelector('#userNameSpan');
@@ -9,12 +9,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const confirmLogout = document.querySelector('#confirmLogout');
     const cancelLogout = document.querySelector('#cancelLogout');
 
-    if (loggedInUser) {
+    if (loggedInUser ) {
         if (loginButton) loginButton.style.display = 'none';
         if (signupButton) signupButton.style.display = 'none';
         if (logoutButton) logoutButton.style.display = 'block';
-
-        if (userNameSpan) userNameSpan.textContent = loggedInUser.name;
+        if (userNameSpan) userNameSpan.textContent = loggedInUser .name;
     } else {
         if (loginButton) loginButton.style.display = 'block';
         if (signupButton) signupButton.style.display = 'block';
@@ -30,15 +29,86 @@ document.addEventListener('DOMContentLoaded', () => {
     confirmLogout.addEventListener('click', () => {
         modal.style.display = 'flex';
         localStorage.removeItem('login_success');
-        alert("Espero verte pronto!")
+        alert("Espero verte pronto!");
         window.location.href = '../index.html';
     });
 
     cancelLogout.addEventListener('click', () => {
         modal.style.display = 'none';
     });
+
+
+
+    //Cart
+    const cartItemsContainer = document.getElementById("cart-items-container");
+
+    if (!cartItemsContainer) {
+        console.error("El contenedor de artículos del carrito no se encontró.");
+        return; 
+    }
+
+
+    if (window.location.pathname.includes("carrito.html")) {
+       
+        let cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+        console.log("Cart items:", cartItems);
+
+        if (cartItems.length === 0) {
+            cartItemsContainer.innerHTML = "<p>No hay productos seleccionados.</p>";
+        } else {
+            cartItems.forEach(item => {
+                const cartItemElement = document.createElement("div");
+                cartItemElement.classList.add("cart-item");
+
+                cartItemElement.innerHTML = `
+                    <img src="${item.imageSrc}" alt="${item.title}" width="80px" id="${item.id}">
+                    <div class="carrito-item-detalles">
+                        <span class="cart-item-title">${item.title}</span>
+                        <div class="quantity-selector">
+                            <i class="fa-solid fa-minus subtract-quantity"></i>
+                            <input type="text" value="${item.amount}" class="cart-item-quantity" disabled>
+                            <i class="fa-solid fa-plus add-quantity"></i>
+                        </div>
+                        <span class="cart-item-price">${item.price}</span>
+                    </div>
+                    <span class="btn-delete" onclick="deleteItemCart(event)">
+                        <i class="fa-solid fa-trash"></i>
+                    </span>
+                `;
+
+                cartItemsContainer.appendChild(cartItemElement);
+            });
+            
+            updateTotalCart();
+        }
+    }
+
+
+    ready();
 });
 
+
+function ready() {
+    let buttonDeleteItem = document.getElementsByClassName('btn-delete');
+    for (var i = 0; i < buttonDeleteItem.length; i++) {
+        let button = buttonDeleteItem[i];
+        button.addEventListener('click', deleteItemCart);
+    }
+
+    let buttonaddQuantity = document.getElementsByClassName('add-quantity');
+    for (var i = 0; i < buttonaddQuantity.length; i++) {
+        let button = buttonaddQuantity[i];
+        button.addEventListener('click', addQuantity);
+    }
+
+    let buttonResetAmount = document.getElementsByClassName('subtract-quantity');
+    for (var i = 0; i < buttonResetAmount.length; i++) {
+        let button = buttonResetAmount[i];
+        button.addEventListener('click', subtractAmount);
+    }
+
+ 
+}
 
 
 let count = localStorage.getItem('cartCount') ? parseInt(localStorage.getItem('cartCount')) : 0;
@@ -155,70 +225,30 @@ function subtractAmount(event) {
     }
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-    const cartItemsContainer = document.getElementById("cart-items-container");
 
+
+let buttonPay = document.getElementById("pay");
+console.log(buttonPay);
+
+buttonPay.addEventListener("click", function() {
     let cartItems = JSON.parse(localStorage.getItem("cart")) || [];
-    console.log("Cart items:", cartItems);
 
     if (cartItems.length === 0) {
-        cartItemsContainer.innerHTML = "<p>No hay productos seleccionados.</p>";
-   
+    
+        Swal.fire({
+            icon: "warning",
+            title: "Carrito vacío",
+            text: "No hay productos en tu carrito.",
+            confirmButtonText: "Aceptar"
+        });
     } else {
-        cartItems.forEach(item => {
-            console.log("item:", item);
-            const cartItemElement = document.createElement("div");
-            cartItemElement.classList.add("cart-item");
-
-            cartItemElement.innerHTML = `
-                <img src="${item.imageSrc}" alt="${item.title}" width="80px" id="${item.id}">
-                <div class="carrito-item-detalles">
-                    <span class="cart-item-title">${item.title}</span>
-                    <div class=".quantity-selector">
-                        <i class="fa-solid fa-minus subtract-quantity"></i>
-                        <input type="text" value="${item.amount}" class="cart-item-quantity" disabled>
-                        <i class="fa-solid fa-plus add-quantity"></i>
-                    </div>
-                    <span class="cart-item-price">${item.price}</span>
-                </div>
-                 <span class="btn-delete" onclick="deleteItemCart()">
-                    <i class="fa-solid fa-trash"></i>
-                </span>
-            `;
-
-            cartItemsContainer.appendChild(cartItemElement);
+  
+        Swal.fire({
+            icon: "success",
+            title: "Tu compra se ha realizado con éxito!",
+            showConfirmButton: false,
+            timer: 1500
         });
         
-        updateTotalCart();
     }
 });
-
-
-
-if (document.readyState === 'loading') {
-   document.addEventListener('DOMContentLoaded', ready);
-} else {
-   ready();
-}
-
-function ready() {
-    let buttonDeleteItem = document.getElementsByClassName('btn-delete');
-    for (var i = 0; i < buttonDeleteItem.length; i++) {
-        let button = buttonDeleteItem[i];
-        button.addEventListener('click', deleteItemCart);
-    }
-
-    let buttonaddQuantity = document.getElementsByClassName('add-quantity');
-    for (var i = 0; i < buttonaddQuantity.length; i++) {
-        let button = buttonaddQuantity[i];
-        button.addEventListener('click', addQuantity);
-    }
-
-    let buttonResetAmount = document.getElementsByClassName('subtract-quantity');
-    for (var i = 0; i < buttonResetAmount.length; i++) {
-        let button = buttonResetAmount[i];
-        button.addEventListener('click', subtractAmount);
-    }
-
- 
-}
