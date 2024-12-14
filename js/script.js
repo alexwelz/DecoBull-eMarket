@@ -101,6 +101,60 @@ function addItemToCart(id, title, price, imageSrc) {
 }
 
 
+function deleteItemCart(event) {
+    let buttonClicked = event.target;
+    let itemCart = buttonClicked.closest('.cart-item');
+    let itemId = itemCart.querySelector('img').id;
+    let cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+    cartItems = cartItems.filter(item => item.id !== itemId);
+    localStorage.setItem("cart", JSON.stringify(cartItems));
+    if (itemCart) {
+        itemCart.remove();
+    }
+    count_cart('remove');
+    updateTotalCart();
+}
+
+function updateTotalCart() {
+    let containerCart = document.getElementsByClassName('cart')[0];
+    let cartItems = containerCart.getElementsByClassName('cart-item');
+    let total = 0;
+
+    for (var i = 0; i < cartItems.length; i++) {
+        let item = cartItems[i];
+        let elementPrice = item.getElementsByClassName('cart-item-price')[0];
+        let price = parseFloat(elementPrice.innerText.replace('$', '').replace('.', ''));
+        let amountItem = item.getElementsByClassName('cart-item-quantity')[0];
+        let amount = amountItem.value;
+
+        total += price * amount;
+    }
+
+    total = Math.round(total * 100) / 100;
+    document.getElementsByClassName('cart-price-total')[0].innerText = '$' + total.toLocaleString("es") + ',00';
+}
+
+function addQuantity(event) {
+    let buttonClicked = event.target;
+    let selector = buttonClicked.parentElement;
+    let currentAmount = selector.getElementsByClassName('cart-item-quantity')[0].value;
+    currentAmount++;
+    selector.getElementsByClassName('cart-item-quantity')[0].value = currentAmount;
+    updateTotalCart();
+}
+
+function subtractAmount(event) {
+    let buttonClicked = event.target;
+    let selector = buttonClicked.parentElement;
+    let currentAmount = selector.getElementsByClassName('cart-item-quantity')[0].value;
+    currentAmount--;
+
+    if (currentAmount >= 1) {
+        selector.getElementsByClassName('cart-item-quantity')[0].value = currentAmount;
+        updateTotalCart();
+    }
+}
+
 document.addEventListener("DOMContentLoaded", function () {
     const cartItemsContainer = document.getElementById("cart-items-container");
 
@@ -134,9 +188,37 @@ document.addEventListener("DOMContentLoaded", function () {
 
             cartItemsContainer.appendChild(cartItemElement);
         });
-
+        
+        updateTotalCart();
     }
 });
 
 
 
+if (document.readyState === 'loading') {
+   document.addEventListener('DOMContentLoaded', ready);
+} else {
+   ready();
+}
+
+function ready() {
+    let buttonDeleteItem = document.getElementsByClassName('btn-delete');
+    for (var i = 0; i < buttonDeleteItem.length; i++) {
+        let button = buttonDeleteItem[i];
+        button.addEventListener('click', deleteItemCart);
+    }
+
+    let buttonaddQuantity = document.getElementsByClassName('add-quantity');
+    for (var i = 0; i < buttonaddQuantity.length; i++) {
+        let button = buttonaddQuantity[i];
+        button.addEventListener('click', addQuantity);
+    }
+
+    let buttonResetAmount = document.getElementsByClassName('subtract-quantity');
+    for (var i = 0; i < buttonResetAmount.length; i++) {
+        let button = buttonResetAmount[i];
+        button.addEventListener('click', subtractAmount);
+    }
+
+ 
+}
