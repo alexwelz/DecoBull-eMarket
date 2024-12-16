@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
         count = 0; 
         updateCartCount();
         alert("Espero verte pronto!");
-        window.location.href = '/index.html';
+        window.location.href = '../index.html';
         modal.style.display = 'none';
     });
 
