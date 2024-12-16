@@ -29,8 +29,12 @@ document.addEventListener("DOMContentLoaded", function () {
     confirmLogout.addEventListener('click', () => {
         modal.style.display = 'flex';
         localStorage.removeItem('login_success');
+        localStorage.removeItem('cart');
+        count = 0; 
+        updateCartCount();
         alert("Espero verte pronto!");
-        window.location.href = '../index.html';
+        window.location.href = '/index.html';
+        modal.style.display = 'none';
     });
 
     cancelLogout.addEventListener('click', () => {
