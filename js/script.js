@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         </div>
                         <span class="cart-item-price">${item.price}</span>
                     </div>
-                    <span class="btn-delete" onclick="deleteItemCart(event)">
+                    <span class="btn-delete">
                         <i class="fa-solid fa-trash"></i>
                     </span>
                 `;
@@ -107,7 +107,6 @@ function ready() {
         button.addEventListener('click', subtractAmount);
     }
 
- 
 }
 
 let count = localStorage.getItem('cartCount') ? parseInt(localStorage.getItem('cartCount')) : 0;

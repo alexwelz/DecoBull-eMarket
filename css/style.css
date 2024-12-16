@@ -144,10 +144,10 @@ nav ul li:hover{
 
 .count_cart {
     position: fixed;
-    padding: 9px;
-    top: 15px; 
-    right: 5px;
-    height: 2px;
+    padding: 6px;
+    top: 4px;
+    right: 7px;
+    height: 18px;
     background-color: #7b6552;
     border-radius: 50%;
     color: #fff;
@@ -420,10 +420,10 @@ footer ul li a:hover i{
 
  .count_cart {
     position: absolute;
-    padding: 9px;
-    top: 80%; 
+    padding: 5px;
+    top: 78%;
     right: 42%;
-    height: 2px;
+    height: 17px;
     background-color: #7b6552;
     border-radius: 50%;
     color: #fff;
