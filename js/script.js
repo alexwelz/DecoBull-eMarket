@@ -110,28 +110,31 @@ function ready() {
  
 }
 
-
 let count = localStorage.getItem('cartCount') ? parseInt(localStorage.getItem('cartCount')) : 0;
 document.querySelector('.count_cart').textContent = count;
+
+function updateCartCount() {
+    localStorage.setItem('cartCount', count);
+    document.querySelector('.count_cart').textContent = count;
+}
 
 function count_cart(command) {
     if (command === 'add') {
         count++;
-        document.querySelector('.count_cart').textContent = count;
+        updateCartCount();
     }
     if (command === 'remove') {
-        localStorage.setItem('cartCount', count);
-        localStorage.getItem('cartCount') ? count = parseInt(localStorage.getItem('cartCount')) : 0;
-        if (count > 0) count--;
-        localStorage.setItem('cartCount', count);
-        document.querySelector('.count_cart').textContent = count;
+         if (count > 0) count--;
+        updateCartCount();
     }
     if (command === 'show') {
-        localStorage.getItem('cartCount') ? count = parseInt(localStorage.getItem('cartCount')) : 0;
         document.querySelector('.count_cart').textContent = count;
     }
 }
 
+window.onload = function() {
+    count_cart('show');
+};
 
 
 let btnAddtoCart = document.querySelectorAll(".add-cart");
@@ -184,6 +187,8 @@ function deleteItemCart(event) {
     count_cart('remove');
     updateTotalCart();
 }
+
+
 
 function updateTotalCart() {
     let containerCart = document.getElementsByClassName('cart')[0];
@@ -239,7 +244,8 @@ buttonPay.addEventListener("click", function() {
             icon: "warning",
             title: "Carrito vacío",
             text: "No hay productos en tu carrito.",
-            confirmButtonText: "Aceptar"
+            showConfirmButton: false,
+            timer: 1500
         });
     } else {
   
@@ -252,3 +258,6 @@ buttonPay.addEventListener("click", function() {
         
     }
 });
+
+
+
