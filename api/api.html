@@ -4,14 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/contacto.css">
+    <link rel="stylesheet" href="../api/api.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    
     <!-- Boostrap icon -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
      <!-- fontawesome icon -->
       <script src="https://kit.fontawesome.com/fcc39418f4.js" crossorigin="anonymous"></script>
      <!-- Favicon -->
      <link rel="shortcut icon" href="../assets/img/logoFavicon.png" type="image/x-icon">
-    <title>Contacto</title>
+    <title>Api</title>
 </head>
 <body>
     <header>
@@ -26,42 +29,45 @@
                 <ul class="mobile">
                     <li><a href="../api/api.html">API</a></li>
                     <li><a href="../index.html">Inicio</a></li>
-                    <li><a href="productos.html">Productos</a></li>
-                    <li><a href="novedades.html">Novedades</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="../pages/productos.html">Productos</a></li>
+                    <li><a href="../pages/novedades.html">Novedades</a></li>
+                    <li><a href="../pages/contacto.html">Contacto</a></li>
                     <li class="dropdown">
                         <a href="#" title="Iniciar sesión">
                             <i class="fa-solid fa-user"></i>
                             <span id="userNameSpan"></span>
                         </a>
                         <ul class="dropdown-content">
-                            <li><a href="login.html" id="loginButton">Iniciar sesión</a></li>
+                            <li><a href="../pages/login.html" id="loginButton">Iniciar sesión</a></li>
                             <li id="logoutButton">Cerrar Sesión</li>
-                            <li><a href="registrarse.html" id="signupButton">Registrarse</a></li>
+                            <li><a href="../pages/registrarse.html" id="signupButton">Registrarse</a></li>
                         </ul>
                     </li>
-                    <li><a href="carrito.html" class="btnCart" title="Carrito"><i class="fa-solid fa-cart-shopping"></i></a>
-                        <span class="count_cart">0</span></li>
+                    <li>
+                        <a href="../pages/carrito.html" class="btnCart" title="Carrito"><i class="fa-solid fa-cart-shopping"></i></a>
+                        <span class="count_cart"></span>
+                    </li>
                     
                 </ul>
            </nav>
     </header>
     <main>
-        <section class="contact" id="contact">
-            <h2 class="heading">Contactanos</h2>
-    
-            <form  action="https://formspree.io/f/xjkvggoz" method="POST">
-                <div class="input-box">
-                    <input type="text" placeholder="Nombre" maxlength="40" name="name" required>
-                    <input type="Email" placeholder="Email"  maxlength="50"  name="email" required>
-                    <input type="number" placeholder="Telefono" name="number">
+      
+        <section class="testimonials">
+            <div class="container">
+                <h2 class="title"> Clientes contentos</h2>
+                <div class="section-header">
                 </div>
-                <textarea name="comments" cols="30" rows="10" placeholder="Mensaje" name="message" required></textarea>
-                <div id="liveAlertPlaceholder"></div>
-                <button type="submit"  class="btnContact" value="Enviar">Enviar</button>
-                <input type="reset"  class="btnContact" value="Borrar">
-            </form>
+                <div class="testimonials-content">
+                    <div class="swiper testimonials-slider js-testimonials-slider">
+                     
+                        <div class="swiper-wrapper"></div>
+                    </div>
+                    <div class="swiper-pagination js-testimonials-pagination"></div>
+                </div>
+            </div>
         </section>
+
     </main>
     <a class="icon-whatsapp" href="https://wa.me/5491167219909?text=Hola%2C%20quisiera%20mas%20informacion" target="_blank">
         <i class="fa-brands fa-whatsapp"></i>
@@ -71,8 +77,6 @@
             <h3>Contactos</h3>
             <li><a class="logo-instagram" href="https://www.instagram.com/deco.bull/" target="_blank"><i class="fa-brands fa-square-instagram"></i></a></li>
             <li><a class="logo-email" href="mailto:deco.bull2023@gmail.com" target="_blank"><i class="fa-solid fa-square-envelope"></i></a></li>
-            <br>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d1956.0246223514537!2d-58.50742438790552!3d-34.461585083617706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sbajo%20san%20isidro!5e0!3m2!1ses-419!2sar!4v1728782669318!5m2!1ses-419!2sar" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </ul>
    </footer>
    <!-- Modal -->
@@ -83,6 +87,8 @@
         <button id="cancelLogout" class="btnModal">No</button>
     </div>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="../js/script.js"></script>
+<script src="../api/api.js"></script>
 </body>
 </html>

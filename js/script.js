@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const cartItemsContainer = document.getElementById("cart-items-container");
 
     if (!cartItemsContainer) {
-        console.error("El contenedor de artículos del carrito no se encontró.");
+       // console.error("El contenedor de artículos del carrito no se encontró.");
         return; 
     }
 
@@ -85,6 +85,30 @@ document.addEventListener("DOMContentLoaded", function () {
             
             updateTotalCart();
         }
+
+        let buttonPay = document.getElementById("pay");
+        console.log(buttonPay);
+    
+        buttonPay.addEventListener("click", function() {
+            let cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+    
+            if (cartItems.length === 0) {
+                Swal.fire({
+                    icon: "warning",
+                    title: "Carrito vacío",
+                    text: "No hay productos en tu carrito.",
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+            } else {
+                Swal.fire({
+                    icon: "success",
+                    title: "Tu compra se ha realizado con éxito!",
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+            }
+        });
     }
 
 
@@ -235,32 +259,6 @@ function subtractAmount(event) {
 
 
 
-let buttonPay = document.getElementById("pay");
-console.log(buttonPay);
-
-buttonPay.addEventListener("click", function() {
-    let cartItems = JSON.parse(localStorage.getItem("cart")) || [];
-
-    if (cartItems.length === 0) {
-    
-        Swal.fire({
-            icon: "warning",
-            title: "Carrito vacío",
-            text: "No hay productos en tu carrito.",
-            showConfirmButton: false,
-            timer: 1500
-        });
-    } else {
-  
-        Swal.fire({
-            icon: "success",
-            title: "Tu compra se ha realizado con éxito!",
-            showConfirmButton: false,
-            timer: 1500
-        });
-        
-    }
-});
 
 
 
