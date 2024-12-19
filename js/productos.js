@@ -61,6 +61,22 @@ function displayProducts(products) {
 
         cardsContainer.appendChild(article);
     });
+
 }
 
 displayProducts(products);
+
+
+
+function ConsoleProducts(products) {
+    products.forEach(product => {
+        console.log(`ID: ${product.id}`);
+        console.log(`Título: ${product.title}`);
+        console.log(`Precio: ${product.price}`);
+        console.log(`Imagen: ${product.imgSrc}`);
+        console.log(`Link: ${product.link}`);
+        console.log('-------------------------'); 
+    });
+}
+
+ConsoleProducts(products);
