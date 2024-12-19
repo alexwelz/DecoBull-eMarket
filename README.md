@@ -12,22 +12,22 @@ Crear una tienda en línea que simule la compra de productos de alfarería. Impl
 
 **🛠️ Tecnologías Utilizadas**
 
-Frontend: HTML5, CSS3, JavaScript
-Control de versiones: Git y GitHub
+- **Frontend**: HTML5, CSS3, JavaScript
+- **Control de versiones**: Git y GitHub
 
 **📑 Funcionalidades Principales**
 
-**Catálogo de Productos:** Visualización de todos los artículos de alfarería disponibles, organizados y con opción de filtrado.
-**Registro e Inicio de Sesión:** Permitir a los usuarios crear cuentas y gestionar sus perfiles para una experiencia personalizada.
-**Sistema de Carrito de Compras:** Los usuarios podrán añadir productos al carrito y proceder a una simulación de pago.
-**Valoraciones y Comentarios:** Los usuarios podrán visualizar reseñas, ayudando a otros compradores en su decisión.
+- **Catálogo de Productos:** Visualización de todos los artículos de alfarería disponibles, organizados y con opción de filtrado.
+- **Registro e Inicio de Sesión:** Permitir a los usuarios crear cuentas y gestionar sus perfiles para una experiencia personalizada.
+- **Sistema de Carrito de Compras:** Los usuarios podrán añadir productos al carrito y proceder a una simulación de pago.
+- **Valoraciones y Comentarios:** Los usuarios podrán visualizar reseñas, ayudando a otros compradores en su decisión.
 
 **👥 Contribuidores**
 
-Nombre del estudiante: Alex Gustavo Welz
-Curso: Talento Tech - Front JS #24234
-Instructor: José Alejandro Zapata
-Tutor: Cristian Urquiza
+- Nombre del estudiante: Alex Gustavo Welz
+- Curso: Talento Tech - Front JS #24234
+- Instructor: José Alejandro Zapata
+- Tutor: Cristian Urquiza
 
 **📌 Estado del Proyecto**
 
