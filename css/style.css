@@ -246,10 +246,10 @@ nav ul li:hover{
 
 /*--------------------------CARDS----------------------------*/
 
-.productos-container {
+.productos-container{
     margin: 5%;
     width: 90%;
-} 
+}
 
 .cards-container {
     display: grid;
