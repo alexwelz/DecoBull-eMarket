@@ -2,11 +2,11 @@
 
 https://alexwelz.github.io/DecoBull-eMarket/index.html
 
-📋** Descripción del Proyecto**
+**📋 Descripción del Proyecto**
 
 Este proyecto consiste en el desarrollo de una plataforma de venta digital de productos de alfarería. La tienda permitirá a los usuarios explorar, comprar y gestionar sus artículos de cerámica desde un entorno en línea. La idea principal es ofrecer una experiencia de compra intuitiva y agradable, destacando la belleza y la funcionalidad de los productos artesanales.
 
-🎯** Objetivos del Proyecto**
+**🎯 Objetivos del Proyecto**
 
 Crear una tienda en línea que simule la compra de productos de alfarería. Implementar funcionalidades típicas de plataformas de comercio electrónico: gestión de usuarios, catálogo de productos, reseñas y recomendaciones. Practicar habilidades técnicas en desarrollo web, diseño de interfaces y manejo de bases de datos.
 
