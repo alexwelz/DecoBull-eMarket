@@ -41,23 +41,26 @@ const products = [
     }
 ];
 
-const cardsContainer = document.getElementById('cards-container');
+function displayProducts(products) {
+    const cardsContainer = document.getElementById('cards-container');
+    products.forEach(product => {
+        const article = document.createElement('article');
+        article.className = 'article-card';
+        article.id = product.id;
 
-products.forEach(product => {
-    const article = document.createElement('article');
-    article.className = 'article-card';
-    article.id = product.id;
+        article.innerHTML = `
+            <div>
+                <a href="${product.link}"><img src="${product.imgSrc}" alt="${product.alt}" class="article-img"></a>
+                <button class="add-cart">
+                    <i class="fa-solid fa-cart-plus"></i>
+                </button>
+            </div>
+            <h3 class="item-title">${product.title}</h3>
+            <p class="item-price">${product.price}</p>
+        `;
 
-    article.innerHTML = `
-        <div>
-            <a href="${product.link}"><img src="${product.imgSrc}" alt="${product.alt}" class="article-img"></a>
-            <button class="add-cart">
-                <i class="fa-solid fa-cart-plus"></i>
-            </button>
-        </div>
-        <h3 class="item-title">${product.title}</h3>
-        <p class="item-price">${product.price}</p>
-    `;
+        cardsContainer.appendChild(article);
+    });
+}
 
-    cardsContainer.appendChild(article);
-});
+displayProducts(products);
